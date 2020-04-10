@@ -6,7 +6,6 @@ error_reporting(E_ALL);
 require 'vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Emeow\NetworkManager;
 use Emeow\EmailManager;
 use Emeow\Command\EmeowCommand;
 
