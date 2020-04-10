@@ -22,7 +22,7 @@ Options:
 ## Installation
 
 ```bash
-curl -LSs -o emeow.phar https://github.com/haphan/emeow/releases/download/v1.0.0/emeow.phar
+curl -LSs -o emeow.phar https://github.com/haphan/emeow/releases/download/v1.0.1/emeow.phar
 chmod +x emeow.phar
 mv emeow.phar /usr/local/bin/emeow
 ```
