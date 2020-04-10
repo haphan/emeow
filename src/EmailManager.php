@@ -15,14 +15,14 @@ class EmailManager
     private $template = null;
 
 
-    public function render(string $recipient, string $subject, array $params = [], $html = false): Email
+    public function render(string $recipient, string $subject, string $sender, array $params = [], $html = false): Email
     {
         $twig = new Environment(new FilesystemLoader(getcwd()), ['cache' => sys_get_temp_dir()]);
 
         $body =  $twig->load($this->template ?? $this->defaultTemplate)->render($params);
 
         $email = (new Email())
-            ->from('haphan.alert@gmail.com')
+            ->from($sender)
             ->to($recipient)
             ->subject($subject)
         ;
