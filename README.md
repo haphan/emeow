@@ -11,9 +11,8 @@ Arguments:
   recipient                    Recipient address
 
 Options:
-      --mailer-dsn=MAILER-DSN  E.g. gmail+stream://USERNAME:APP-PASSWORD@default
-      --ifname=IFNAME          Bind network context to a network interface e.g. eth1
-      --ifaddr=IFADDR          Bind network context to a network address e.g. 172.16.1.2
+      --subject=SUBJECT        Email Subject [default: "You got Emeow!"]
+      --mailer-dsn=MAILER-DSN  E.g. gmail+stream://USERNAME:PASSWORD@default?ip=1.2.3.4
       --var=VAR                Variables to be used in email template in format KEY=VALUE (multiple values allowed)
       --tpl=TPL                Email template file [default: "email.twig"]
       --html                   Send email in html mode. Default is txt mode
