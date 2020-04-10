@@ -7,9 +7,7 @@ use Symfony\Component\Mailer\Transport\AbstractTransportFactory;
 use Symfony\Component\Mailer\Transport\Dsn;
 use Symfony\Component\Mailer\Transport\TransportInterface;
 use Symfony\Component\Mailer\Bridge\Google\Transport\GmailSmtpTransport;
-/**
- * @author Konstantin Myakshin <molodchick@gmail.com>
- */
+
 final class GmailTransportSourceIpAwareFactory extends AbstractTransportFactory
 {
     public function create(Dsn $dsn): TransportInterface

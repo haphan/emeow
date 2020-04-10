@@ -12,7 +12,7 @@ use Emeow\Command\EmeowCommand;
 
 $app = new Application('emeow', '1.0.0');
 
-$app->add(new EmeowCommand(null, new NetworkManager(), new EmailManager()))
+$app->add(new EmeowCommand(null, new EmailManager()))
     ->getApplication()
     ->setDefaultCommand('emeow', true)
     ->run();
