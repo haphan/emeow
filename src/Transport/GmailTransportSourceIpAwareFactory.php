@@ -13,8 +13,17 @@ final class GmailTransportSourceIpAwareFactory extends AbstractTransportFactory
     public function create(Dsn $dsn): TransportInterface
     {
         if (\in_array($dsn->getScheme(), $this->getSupportedSchemes())) {
-            $transport = new GmailSmtpTransport($this->getUser($dsn), $this->getPassword($dsn), $this->dispatcher, $this->logger);
-            $transport->getStream()->setSourceIp($dsn->getOption('ip'));
+            $transport = new GmailSmtpTransport(
+                $this->getUser($dsn),
+                $this->getPassword($dsn),
+                $this->dispatcher,
+                $this->logger
+            );
+            $srcIp = $dsn->getOption('ip');
+            if ($srcIp) {
+                $transport->getStream()->setSourceIp($srcIp);
+            }
+
             return $transport;
         }
 

@@ -35,10 +35,10 @@ class Transport extends BaseTransport
             }
         }
 
-        yield new NullTransportFactory($dispatcher, $client, $logger);
+        yield new BaseTransport\NullTransportFactory($dispatcher, $client, $logger);
 
-        yield new SendmailTransportFactory($dispatcher, $client, $logger);
+        yield new BaseTransport\SendmailTransportFactory($dispatcher, $client, $logger);
 
-        yield new EsmtpTransportFactory($dispatcher, $client, $logger);
+        yield new BaseTransport\Smtp\EsmtpTransportFactory($dispatcher, $client, $logger);
     }
 }
