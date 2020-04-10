@@ -1,5 +1,7 @@
 ## Emeow
 
+![Emeow](https://i.imgur.com/ecTM5DI.png)
+
 ```
 Description:
   Emeow is a mailman who knows how to handle mail and network
