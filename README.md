@@ -23,13 +23,13 @@ Options:
 
 ## Examples
 
-Send an email to `recipient@example.com` using template defined default location `email.twig`
+Send an email to `recipient@example.com` using a template defined the default location `email.twig`
 
 ```bash
 emeow --mailer-dns=gmail+stream://foobar:your-app-password-here@default --  recipient@example.com
 ```
 
-Send and email using custom source IP address
+Send an email using custom source IP address
 
 ```bash
 emeow --mailer-dns=gmail+stream://foobar:your-app-password-here@default?ip=192.168.0.123 \
@@ -37,7 +37,7 @@ emeow --mailer-dns=gmail+stream://foobar:your-app-password-here@default?ip=192.1
     recipient@example.com
 ```
 
-Send and email with custom variables and template file
+Send an email with custom variables and template file
 ```bash
 emeow --mailer-dns=gmail+stream://foobar:your-app-password-here@default \
     --var 'name=John Doe' \
