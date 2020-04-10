@@ -25,12 +25,10 @@ class EmeowCommand extends Command
     private const OPT_MAILER_DSN = 'mailer-dsn';
 
     private $em;
-    private $networkManager;
 
-    public function __construct(?string $name = null, NetworkManager $networkManager, EmailManager $em)
+    public function __construct(?string $name = null, EmailManager $em)
     {
         $this->em = $em;
-        $this->networkManager = $networkManager;
         parent::__construct($name);
     }
 
